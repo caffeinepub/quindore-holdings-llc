@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.25rem;
+
+        /* Quindore Brand Tokens */
+        --color-bg: oklch(0.09 0 0);
+        --color-text: oklch(0.93 0.005 90);
+        --color-text-muted: oklch(0.65 0.005 90);
+        --color-gold: oklch(0.72 0.09 75);
+        --color-gold-dim: oklch(0.55 0.07 75);
+        --color-surface: oklch(0.12 0 0);
+        --color-surface-2: oklch(0.15 0 0);
+        --color-border: oklch(0.22 0 0);
+
+        /* Shadcn compatibility tokens */
+        --background: 0.09 0 0;
+        --foreground: 0.93 0.005 90;
+        --card: 0.12 0 0;
+        --card-foreground: 0.93 0.005 90;
+        --popover: 0.12 0 0;
+        --popover-foreground: 0.93 0.005 90;
+        --primary: 0.72 0.09 75;
+        --primary-foreground: 0.09 0 0;
+        --secondary: 0.15 0 0;
+        --secondary-foreground: 0.93 0.005 90;
+        --muted: 0.15 0 0;
+        --muted-foreground: 0.55 0.005 90;
+        --accent: 0.72 0.09 75;
+        --accent-foreground: 0.09 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.22 0 0;
+        --input: 0.22 0 0;
+        --ring: 0.72 0.09 75;
+        --chart-1: 0.72 0.09 75;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        --sidebar: 0.12 0 0;
+        --sidebar-foreground: 0.93 0.005 90;
+        --sidebar-primary: 0.72 0.09 75;
+        --sidebar-primary-foreground: 0.09 0 0;
+        --sidebar-accent: 0.15 0 0;
+        --sidebar-accent-foreground: 0.93 0.005 90;
+        --sidebar-border: 0.22 0 0;
+        --sidebar-ring: 0.72 0.09 75;
+    }
+
+    * {
+        @apply border-border;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-image: url('/assets/generated/bg-texture.dim_800x800.png');
+        background-repeat: repeat;
+        background-size: 400px 400px;
+        background-attachment: fixed;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: var(--color-text);
+    }
+}
+
+@layer components {
+    /* Gold divider line */
+    .gold-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0%, var(--color-gold) 20%, var(--color-gold) 80%, transparent 100%);
+        opacity: 0.4;
+    }
+
+    .gold-divider-full {
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-gold);
+        opacity: 0.25;
+    }
+
+    /* Section padding */
+    .section-padding {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    @media (min-width: 768px) {
+        .section-padding {
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .section-padding {
+            padding-top: 11rem;
+            padding-bottom: 11rem;
+        }
+    }
+
+    /* Gold CTA button */
+    .btn-gold-outline {
+        display: inline-block;
+        padding: 0.875rem 2.5rem;
+        border: 1px solid var(--color-gold);
+        color: var(--color-gold);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .btn-gold-outline:hover {
+        background-color: var(--color-gold);
+        color: var(--color-bg);
+    }
+
+    /* Structure card */
+    .structure-card {
+        border: 1px solid var(--color-gold);
+        border-opacity: 0.3;
+        background-color: var(--color-surface);
+        padding: 2rem 2rem;
+    }
+
+    /* Governance card */
+    .governance-card {
+        border-left: 2px solid var(--color-gold);
+        padding-left: 1.5rem;
+    }
+
+    /* Fade in on scroll */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Legal document styles */
+    .legal-content h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--color-text);
+        margin-top: 2.5rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .legal-content p {
+        color: var(--color-text-muted);
+        margin-bottom: 1rem;
+        font-size: 0.9375rem;
+        line-height: 1.8;
+    }
+
+    .legal-content ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .legal-content ul li {
+        color: var(--color-text-muted);
+        font-size: 0.9375rem;
+        padding-left: 1.25rem;
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+
+    .legal-content ul li::before {
+        content: '—';
+        position: absolute;
+        left: 0;
+        color: var(--color-gold);
+        opacity: 0.6;
+    }
+
+    /* Monogram text fallback */
+    .monogram-text {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-gold);
+        letter-spacing: 0.05em;
+    }
+
+    /* Nav link */
+    .nav-link {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        padding: 0.5rem 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-link:hover {
+        color: var(--color-gold);
+    }
+
+    /* Section label */
+    .section-label {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+        margin-bottom: 1.25rem;
+        display: block;
+    }
+
+    /* Tree diagram */
+    .tree-node {
+        border: 1px solid var(--color-gold);
+        background-color: var(--color-surface);
+        padding: 0.875rem 1.25rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .tree-node.root {
+        border-color: var(--color-gold);
+        background-color: var(--color-surface-2);
+    }
+
+    .tree-connector {
+        width: 1px;
+        background-color: var(--color-gold);
+        opacity: 0.4;
+        margin: 0 auto;
+    }
+
+    .tree-connector-h {
+        height: 1px;
+        background-color: var(--color-gold);
+        opacity: 0.4;
+    }
+}

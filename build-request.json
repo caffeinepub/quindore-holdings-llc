@@ -1,0 +1,335 @@
+{
+  "kind": "build_request",
+  "title": "Quindore Holdings LLC — Institutional Corporate Website",
+  "projectName": "Quindore Holdings",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a global visual theme across all pages: background #0B0B0B, primary text #EDEDED, accent/gold #C6A85E. Load 'Playfair Display' (serif) for all headings and 'Inter' (sans-serif) for all body copy via Google Fonts. Apply ultra-generous spacing (section padding minimum 120px vertical), a clean 12-column grid, subtle architectural background texture (fine diagonal or grid line pattern in near-black at low opacity), and thin horizontal gold divider lines between each section. No stock photos, no animations beyond subtle fade-on-scroll, no sliders, no carousels. The overall impression must read as institutional, compliance-grade, and conservative.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Dark background (#0B0B0B)",
+          "Off-white typography (#EDEDED)",
+          "Muted gold accent (#C6A85E)",
+          "Elegant serif for headings (e.g., Playfair Display)",
+          "Clean sans-serif for body (e.g., Inter)",
+          "subtle architectural background texture",
+          "Subtle gold divider lines between sections"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background is #0B0B0B site-wide",
+        "All headings use Playfair Display; all body copy uses Inter",
+        "Gold accent (#C6A85E) is applied to dividers, CTA borders, and highlights",
+        "A low-opacity architectural texture is visible behind content on all pages",
+        "Thin gold horizontal lines visually separate each major section",
+        "No animations other than a subtle fade-in on scroll (CSS only, no JS libraries)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build the site header containing the Quindore Holdings LLC logo lockup (full wordmark + 'Q' monogram generated asset) left-aligned, and a minimal right-aligned navigation with links: About, Structure, Governance, Contact. The header must be sticky/fixed on scroll, with a semi-transparent dark background and a bottom gold accent line. Header must be fully responsive with a hamburger menu on mobile.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Integrate your gold logo properly in header",
+          "Full logo + monogram combination lockup"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Logo lockup (wordmark + monogram) renders in the header using the generated asset",
+        "Navigation links scroll smoothly to their respective sections",
+        "Header is sticky and maintains dark semi-transparent background on scroll",
+        "A thin gold line appears at the bottom of the header",
+        "On viewports < 768px, navigation collapses into a hamburger menu"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Hero section with: headline 'Structured Ownership. Disciplined Governance. Long-Term Value.' in large Playfair Display, subtext 'Quindore Holdings LLC operates as a U.S.-registered parent entity overseeing independent digital operating subsidiaries under centralized strategic and financial oversight.' in Inter, and a single outlined CTA button labeled 'Contact' that anchors to the Contact section. The hero must occupy full viewport height, center-aligned content vertically, with the architectural background texture visible.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Headline: Structured Ownership. Disciplined Governance. Long-Term Value.",
+          "Subtext: Quindore Holdings LLC operates as a U.S.-registered parent entity...",
+          "CTA: Contact"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero occupies 100vh",
+        "Headline text matches exactly: 'Structured Ownership. Disciplined Governance. Long-Term Value.'",
+        "Subtext paragraph renders below the headline in Inter at a smaller weight",
+        "'Contact' CTA button is outlined in gold (#C6A85E) and smooth-scrolls to the Contact section",
+        "No background image — texture only"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build the About section explaining: (1) Quindore Holdings LLC's role as a parent holding company, not an operating business; (2) centralized governance over subsidiaries; (3) long-term capital discipline and asset development focus; (4) the required disclaimer line 'This domain does not process consumer transactions directly.' The section must use a two-column layout on desktop (heading/summary left, detailed copy right) and a single column on mobile.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Parent holding company role",
+          "Centralized governance",
+          "Long-term capital discipline",
+          "Asset development focus",
+          "This domain does not process consumer transactions directly."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four topics are covered in clear, formal prose",
+        "The exact line 'This domain does not process consumer transactions directly.' appears verbatim",
+        "Two-column desktop layout; single-column on mobile",
+        "Section is separated from adjacent sections by gold divider lines"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build the Operating Structure section explaining the corporate hierarchy: (1) Quindore Holdings LLC as parent holding entity; (2) controlled subsidiaries operating under centralized oversight; (3) independent operating platforms within each subsidiary; (4) note that subsidiaries may transact under their own trade names. Present this as a clean structured text layout — no diagrams in this section; use a labeled grid or stacked card layout with gold accent borders.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Parent holding entity",
+          "Controlled subsidiaries",
+          "Independent operating platforms",
+          "Subsidiaries may transact under their own trade names"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Four structural tiers are clearly labeled and explained",
+        "The trade name note is explicitly included",
+        "Layout uses a grid or stacked card pattern with gold (#C6A85E) border accents",
+        "No diagrams or SVG charts in this section"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build the Compliance & Governance section with formal prose covering: (1) operation under applicable U.S. federal and Wyoming state regulations; (2) internal compliance standards and policies; (3) financial reporting structure; (4) all payments processed exclusively through authorized third-party providers. Use a clean two-column or four-block grid layout with gold-accented category labels.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Operates under applicable U.S. federal and Wyoming state regulations",
+          "Internal compliance standards",
+          "Financial reporting structure",
+          "Payments processed through authorized third-party providers"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four compliance topics are covered with precise formal language",
+        "Wyoming state and U.S. federal regulatory context is explicitly stated",
+        "Third-party payment processor note is included verbatim in concept",
+        "Section uses a structured grid layout with gold accent labels"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build a dedicated Corporate Structure page (route /structure) that renders a visual corporate hierarchy diagram showing: Quindore Holdings LLC at the top, with branches to labeled subsidiary placeholders, and further branches to operating platform placeholders. Use a CSS/SVG tree layout styled in the site's dark/gold theme. Include a brief executive summary paragraph above the diagram.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Dedicated 'Corporate Structure' diagram page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page is accessible at /structure route",
+        "A hierarchical tree diagram renders with Quindore Holdings LLC as root node",
+        "Diagram uses dark background, gold lines, and off-white node labels",
+        "Executive summary paragraph appears above the diagram",
+        "Diagram is responsive (scrollable on mobile if needed)"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build a dedicated Executive Governance page (route /governance) that expands the governance content with formal sections covering: board-level oversight, internal audit and compliance function, risk management framework, and reporting obligations. Use an editorial two-column layout with section anchors and a right-side in-page navigation menu.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Executive-level governance expansion page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page is accessible at /governance route",
+        "Four governance sections are present: oversight, audit/compliance, risk management, reporting",
+        "Right-side sticky in-page navigation menu links to each section anchor",
+        "Two-column editorial layout on desktop; single-column on mobile",
+        "Consistent visual theme with site (dark, gold accents, serif headings)"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build the Contact section displaying the email address info@quindore.com as a styled, clickable mailto link. No contact form. Include a brief formal line such as 'For institutional inquiries, please direct correspondence to the address below.' Section must be minimal and uncluttered.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact Section Display: info@quindore.com"
+        ]
+      },
+      "acceptanceCriteria": [
+        "info@quindore.com renders as a styled mailto link",
+        "No contact form is present",
+        "Brief formal introductory sentence is displayed",
+        "Section is visually minimal and consistent with site theme"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Build the site footer containing: registered address '5830 E 2nd St, Ste 7000 #32674, Casper, WY 82609, United States', copyright line '© Quindore Holdings LLC. All rights reserved.', and footer navigation links to Privacy Policy (/privacy), Terms of Service (/terms), and Legal Disclaimer (/legal). Style in a dark sub-footer with muted gold link color and small Inter typography.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "5830 E 2nd St, Ste 7000 #32674 Casper, WY 82609 United States",
+          "Privacy Policy",
+          "Terms of Service",
+          "Legal Disclaimer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Registered address renders exactly as specified",
+        "Copyright line is present",
+        "Three footer links navigate to /privacy, /terms, and /legal respectively",
+        "Footer uses small Inter typography with muted gold link styling"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Build a Privacy Policy page at route /privacy with formal institutional privacy policy content appropriate for a U.S. holding company website, covering: data collection practices (minimal — no e-commerce), use of cookies, third-party services, contact for privacy inquiries (info@quindore.com), and Wyoming governing law. Format as a long-form document page with serif heading, numbered sections, and a 'Last Updated' date.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add full Privacy / Terms / Legal pages",
+          "Privacy Policy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page accessible at /privacy",
+        "Includes sections: data collection, cookies, third-party services, contact, governing law",
+        "info@quindore.com listed as privacy contact",
+        "Wyoming governing law is referenced",
+        "'Last Updated' date is displayed at top",
+        "Consistent dark/gold/serif visual theme"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Build a Terms of Service page at route /terms with formal terms appropriate for an informational holding company website (no e-commerce, no user accounts). Cover: purpose of the site (informational only), no warranties, limitation of liability, intellectual property, governing law (Wyoming), and contact for legal inquiries (info@quindore.com). Same document layout as the Privacy Policy page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Terms of Service"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page accessible at /terms",
+        "Includes sections: informational purpose, no warranties, liability limitation, IP, governing law, contact",
+        "Wyoming governing law explicitly stated",
+        "Same visual layout and formatting as the Privacy Policy page"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Build a Legal Disclaimer page at route /legal with content clarifying: the website is for informational purposes only, Quindore Holdings LLC is not a licensed financial advisor or investment firm, no content constitutes financial or legal advice, subsidiaries operate independently under their own legal identities, and no consumer-facing transactions occur at this domain. Same document layout as Privacy Policy and Terms pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Legal Disclaimer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page accessible at /legal",
+        "Informational-only disclaimer is clearly stated",
+        "Not-a-financial-advisor disclaimer is present",
+        "Subsidiary independence note is included",
+        "No-consumer-transactions note matches the About section disclaimer in spirit",
+        "Consistent document layout with other legal pages"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "The site must be fully responsive across mobile (320px+), tablet (768px+), and desktop (1280px+). All sections, the header/nav, footer, and legal pages must reflow gracefully. Touch targets must meet accessibility minimums. No horizontal scroll on any viewport.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Fully responsive"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No horizontal scroll at 320px viewport width",
+        "Header collapses to hamburger menu below 768px",
+        "All grid layouts stack to single column on mobile",
+        "Touch targets are at least 44px",
+        "Font sizes remain readable on all viewports"
+      ]
+    }
+  ],
+  "constraints": [
+    "No stock photos anywhere on the site",
+    "No testimonials, reviews, or social proof elements",
+    "No marketing language, hype, or exaggerated claims",
+    "No sliders, carousels, or auto-playing elements",
+    "No heavy JavaScript animations — CSS transitions only",
+    "Exact text strings specified by the user (headline, subtext, address, email, disclaimer line) must appear verbatim",
+    "Color palette strictly limited to #0B0B0B background, #EDEDED text, #C6A85E accent — no other primary colors"
+  ],
+  "nonGoals": [
+    "E-commerce or payment processing functionality",
+    "User authentication or accounts",
+    "Blog or news feed",
+    "Live chat or contact form (email link only)",
+    "DNS/Cloudflare deployment checklist (infrastructure — out of scope for this build)",
+    "Stripe review heuristics checklist document (advisory — out of scope)",
+    "Investor-grade variant as a separate build",
+    "Backend data persistence (purely static/informational site)"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Quindore Holdings LLC full wordmark logotype in off-white (#EDEDED) on transparent background, elegant serif lettering with a muted gold 'Q' monogram mark to the left (quindore-logo-lockup.dim_480x80.png)",
+      "Standalone 'Q' monogram mark in muted gold (#C6A85E) on transparent background, geometric or architectural style (quindore-monogram.dim_120x120.png)",
+      "Subtle architectural background texture — fine orthogonal grid or diagonal line pattern in near-black (#111111) on transparent/dark background, tileable (bg-texture.dim_800x800.png)"
+    ],
+    "edits": []
+  }
+}

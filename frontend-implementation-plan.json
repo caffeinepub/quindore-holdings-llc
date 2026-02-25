@@ -1,0 +1,326 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Quindore Holdings LLC — Institutional Corporate Website (Frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement global visual theme with dark background, Playfair Display/Inter fonts, gold accents, architectural texture, and institutional styling",
+      "acceptanceCriteria": [
+        "Background is #0B0B0B site-wide",
+        "All headings use Playfair Display; all body copy uses Inter",
+        "Gold accent (#C6A85E) is applied to dividers, CTA borders, and highlights",
+        "A low-opacity architectural texture is visible behind content on all pages",
+        "Thin gold horizontal lines visually separate each major section",
+        "No animations other than a subtle fade-in on scroll (CSS only, no JS libraries)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Import Google Fonts (Playfair Display and Inter). Define CSS custom properties for colors: --color-bg (#0B0B0B), --color-text (#EDEDED), --color-accent (#C6A85E). Apply global body styles with background color, text color, and font-family (Inter). Set heading font-family to Playfair Display. Add architectural background texture using the generated asset at frontend/public/assets/generated/bg-texture.dim_800x800.png as a repeating background image with low opacity. Define utility classes for section padding (min 120px vertical), gold divider lines, and fade-on-scroll animation (CSS-only)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme to include custom colors (bg: #0B0B0B, text: #EDEDED, accent: #C6A85E), custom font families (serif: Playfair Display, sans: Inter), custom spacing values for generous section padding, and ensure the architectural texture background is accessible via Tailwind utilities."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build site header with logo lockup, minimal navigation, sticky behavior, and responsive hamburger menu",
+      "acceptanceCriteria": [
+        "Logo lockup (wordmark + monogram) renders in the header using the generated asset",
+        "Navigation links scroll smoothly to their respective sections",
+        "Header is sticky and maintains dark semi-transparent background on scroll",
+        "A thin gold line appears at the bottom of the header",
+        "On viewports < 768px, navigation collapses into a hamburger menu"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create a sticky header component with logo lockup image (frontend/public/assets/generated/quindore-logo-lockup.dim_480x80.png) left-aligned and navigation links (About, Structure, Governance, Contact) right-aligned. Implement smooth scroll behavior for anchor links. Apply semi-transparent dark background, gold bottom border, and responsive hamburger menu for viewports < 768px using Tailwind classes and React state for menu toggle."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Header component at the top of the application layout, ensuring it appears on all pages and routes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Hero section with headline, subtext, CTA button, full viewport height, and architectural background",
+      "acceptanceCriteria": [
+        "Hero occupies 100vh",
+        "Headline text matches exactly: 'Structured Ownership. Disciplined Governance. Long-Term Value.'",
+        "Subtext paragraph renders below the headline in Inter at a smaller weight",
+        "'Contact' CTA button is outlined in gold (#C6A85E) and smooth-scrolls to the Contact section",
+        "No background image — texture only"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create a full-height (100vh) Hero section with vertically centered content. Display headline 'Structured Ownership. Disciplined Governance. Long-Term Value.' in Playfair Display, subtext 'Quindore Holdings LLC operates as a U.S.-registered parent entity overseeing independent digital operating subsidiaries under centralized strategic and financial oversight.' in Inter, and a gold-outlined CTA button labeled 'Contact' that smooth-scrolls to the Contact section. Apply architectural texture background (inherited from global styles)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build About section with parent company role, governance, capital discipline, and consumer transaction disclaimer in two-column layout",
+      "acceptanceCriteria": [
+        "All four topics are covered in clear, formal prose",
+        "The exact line 'This domain does not process consumer transactions directly.' appears verbatim",
+        "Two-column desktop layout; single-column on mobile",
+        "Section is separated from adjacent sections by gold divider lines"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "create",
+          "description": "Create About section with two-column layout on desktop (heading/summary left, detailed copy right) and single-column on mobile. Cover four topics: (1) parent holding company role, (2) centralized governance, (3) long-term capital discipline and asset development, (4) include the exact disclaimer 'This domain does not process consumer transactions directly.' Add gold horizontal divider lines at top and bottom of section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Operating Structure section explaining corporate hierarchy with labeled grid or stacked card layout",
+      "acceptanceCriteria": [
+        "Four structural tiers are clearly labeled and explained",
+        "The trade name note is explicitly included",
+        "Layout uses a grid or stacked card pattern with gold (#C6A85E) border accents",
+        "No diagrams or SVG charts in this section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/OperatingStructure.tsx",
+          "operation": "create",
+          "description": "Create Operating Structure section with a labeled grid or stacked card layout. Explain four tiers: (1) Quindore Holdings LLC as parent holding entity, (2) controlled subsidiaries under centralized oversight, (3) independent operating platforms within subsidiaries, (4) note that subsidiaries may transact under their own trade names. Apply gold border accents to cards/grid items. Include gold divider lines at section boundaries."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Compliance & Governance section with four formal topics in grid layout",
+      "acceptanceCriteria": [
+        "All four compliance topics are covered with precise formal language",
+        "Wyoming state and U.S. federal regulatory context is explicitly stated",
+        "Third-party payment processor note is included verbatim in concept",
+        "Section uses a structured grid layout with gold accent labels"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ComplianceGovernance.tsx",
+          "operation": "create",
+          "description": "Create Compliance & Governance section with two-column or four-block grid layout. Cover: (1) operation under U.S. federal and Wyoming state regulations, (2) internal compliance standards and policies, (3) financial reporting structure, (4) payments processed exclusively through authorized third-party providers. Apply gold-accented category labels and section divider lines."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build dedicated Corporate Structure page with visual hierarchy diagram and executive summary",
+      "acceptanceCriteria": [
+        "Page is accessible at /structure route",
+        "A hierarchical tree diagram renders with Quindore Holdings LLC as root node",
+        "Diagram uses dark background, gold lines, and off-white node labels",
+        "Executive summary paragraph appears above the diagram",
+        "Diagram is responsive (scrollable on mobile if needed)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/StructurePage.tsx",
+          "operation": "create",
+          "description": "Create a dedicated Corporate Structure page component with executive summary paragraph and a CSS/SVG-based hierarchical tree diagram. Show Quindore Holdings LLC at the top with branches to subsidiary placeholders and further branches to operating platform placeholders. Style with dark background, gold lines, and off-white labels. Make responsive with horizontal scroll on mobile if needed."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import StructurePage and register route /structure in the router configuration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build dedicated Executive Governance page with four governance sections and right-side in-page navigation",
+      "acceptanceCriteria": [
+        "Page is accessible at /governance route",
+        "Four governance sections are present: oversight, audit/compliance, risk management, reporting",
+        "Right-side sticky in-page navigation menu links to each section anchor",
+        "Two-column editorial layout on desktop; single-column on mobile",
+        "Consistent visual theme with site (dark, gold accents, serif headings)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/GovernancePage.tsx",
+          "operation": "create",
+          "description": "Create Executive Governance page with four formal sections: board-level oversight, internal audit and compliance function, risk management framework, and reporting obligations. Implement two-column editorial layout with main content on the left and sticky in-page navigation menu on the right (anchors to each section). Single-column on mobile. Apply consistent dark/gold theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import GovernancePage and register route /governance in the router configuration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Contact section with mailto link and minimal formal presentation",
+      "acceptanceCriteria": [
+        "info@quindore.com renders as a styled mailto link",
+        "No contact form is present",
+        "Brief formal introductory sentence is displayed",
+        "Section is visually minimal and consistent with site theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "create",
+          "description": "Create Contact section displaying a brief formal line (e.g., 'For institutional inquiries, please direct correspondence to the address below.') and info@quindore.com as a styled mailto link. No contact form. Apply minimal, uncluttered styling with gold divider lines at section boundaries."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Build site footer with registered address, copyright, and legal navigation links",
+      "acceptanceCriteria": [
+        "Registered address renders exactly as specified",
+        "Copyright line is present",
+        "Three footer links navigate to /privacy, /terms, and /legal respectively",
+        "Footer uses small Inter typography with muted gold link styling"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create Footer component with registered address '5830 E 2nd St, Ste 7000 #32674, Casper, WY 82609, United States', copyright line '© Quindore Holdings LLC. All rights reserved.', and footer navigation links to Privacy Policy (/privacy), Terms of Service (/terms), and Legal Disclaimer (/legal). Style in dark sub-footer with small Inter typography and muted gold link color."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Footer component at the bottom of the application layout, ensuring it appears on all pages and routes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Build Privacy Policy page with formal institutional content and document layout",
+      "acceptanceCriteria": [
+        "Page accessible at /privacy",
+        "Includes sections: data collection, cookies, third-party services, contact, governing law",
+        "info@quindore.com listed as privacy contact",
+        "Wyoming governing law is referenced",
+        "'Last Updated' date is displayed at top",
+        "Consistent dark/gold/serif visual theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PrivacyPage.tsx",
+          "operation": "create",
+          "description": "Create Privacy Policy page with long-form document layout. Include sections: data collection practices (minimal, no e-commerce), use of cookies, third-party services, contact for privacy inquiries (info@quindore.com), and Wyoming governing law. Display 'Last Updated' date at top. Use serif headings, numbered sections, and consistent dark/gold theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import PrivacyPage and register route /privacy in the router configuration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Build Terms of Service page with formal terms for informational site",
+      "acceptanceCriteria": [
+        "Page accessible at /terms",
+        "Includes sections: informational purpose, no warranties, liability limitation, IP, governing law, contact",
+        "Wyoming governing law explicitly stated",
+        "Same visual layout and formatting as the Privacy Policy page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TermsPage.tsx",
+          "operation": "create",
+          "description": "Create Terms of Service page with formal terms appropriate for an informational holding company website (no e-commerce, no user accounts). Cover: purpose of the site (informational only), no warranties, limitation of liability, intellectual property, governing law (Wyoming), and contact for legal inquiries (info@quindore.com). Use same document layout as PrivacyPage with numbered sections, serif headings, and 'Last Updated' date."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import TermsPage and register route /terms in the router configuration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Build Legal Disclaimer page clarifying informational purpose and subsidiary independence",
+      "acceptanceCriteria": [
+        "Page accessible at /legal",
+        "Informational-only disclaimer is clearly stated",
+        "Not-a-financial-advisor disclaimer is present",
+        "Subsidiary independence note is included",
+        "No-consumer-transactions note matches the About section disclaimer in spirit",
+        "Consistent document layout with other legal pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LegalPage.tsx",
+          "operation": "create",
+          "description": "Create Legal Disclaimer page clarifying: website is for informational purposes only, Quindore Holdings LLC is not a licensed financial advisor or investment firm, no content constitutes financial or legal advice, subsidiaries operate independently under their own legal identities, and no consumer-facing transactions occur at this domain. Use same document layout as PrivacyPage and TermsPage with numbered sections and 'Last Updated' date."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import LegalPage and register route /legal in the router configuration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Ensure full responsive design across mobile, tablet, and desktop viewports",
+      "acceptanceCriteria": [
+        "No horizontal scroll at 320px viewport width",
+        "Header collapses to hamburger menu below 768px",
+        "All grid layouts stack to single column on mobile",
+        "Touch targets are at least 44px",
+        "Font sizes remain readable on all viewports"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Verify and refine responsive behavior: hamburger menu activates below 768px, touch targets meet 44px minimum, no horizontal overflow on mobile."
+        },
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Ensure two-column layout stacks to single column on mobile (< 768px) with proper padding and no horizontal scroll."
+        },
+        {
+          "path": "frontend/src/components/OperatingStructure.tsx",
+          "operation": "modify",
+          "description": "Ensure grid/card layout stacks to single column on mobile with proper spacing and no overflow."
+        },
+        {
+          "path": "frontend/src/components/ComplianceGovernance.tsx",
+          "operation": "modify",
+          "description": "Ensure grid layout stacks to single column on mobile with proper spacing."
+        },
+        {
+          "path": "frontend/src/pages/GovernancePage.tsx",
+          "operation": "modify",
+          "description": "Ensure two-column editorial layout (content + in-page nav) stacks to single column on mobile, with sticky nav disabled or repositioned."
+        },
+        {
+          "path": "frontend/src/pages/StructurePage.tsx",
+          "operation": "modify",
+          "description": "Ensure corporate hierarchy diagram is responsive: allow horizontal scroll on mobile if needed, and adjust font sizes for readability."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add responsive typography scale using Tailwind responsive utilities or CSS media queries to ensure font sizes remain readable across all viewports (320px+, 768px+, 1280px+)."
+        }
+      ]
+    }
+  ]
+}
