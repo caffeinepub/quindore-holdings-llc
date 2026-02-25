@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Premium institutional-grade corporate website for Quindore Holdings LLC — a Wyoming-registered private holding company. Dark (#0B0B0B) background, off-white (#EDEDED) text, muted gold (#C6A85E) accents. Elegant serif (Playfair Display) headings and Inter body. Production-ready HTML/CSS with external stylesheet, no frameworks, no inline styles. Designed for financial institution review (Stripe, banks, payment processors).",
   "architectural_notes": [
     "Production-ready HTML + external CSS only — no frameworks, no inline styles, no unnecessary JavaScript",
@@ -11,7 +11,7 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Quindore Holdings LLC full wordmark logotype in off-white (#EDEDED) on transparent background, elegant serif lettering with a muted gold 'Q' monogram mark to the left (quindore-logo-lockup.dim_480x80.png)\n- Standalone 'Q' monogram mark in muted gold (#C6A85E) on transparent background, geometric or architectural style (quindore-monogram.dim_120x120.png)\n- Subtle architectural background texture — fine orthogonal grid or diagonal line pattern in near-black (#111111) on transparent/dark background, tileable (bg-texture.dim_800x800.png)",
+  "imageRequirements": "## Edit Images\n- Remove the white background and output a transparent PNG of the gold QH monogram lettermark on a transparent background (IMG_20260226_034111-1.png > qh-logo.dim_256x256.png)",
   "existing_features": [
     {
       "id": "feature-implement-a-global-visual-theme-across-all-pages-background-0b0b0b-primary-text-ededed-accent-gold-c6a85e-load-playfair-display-serif-for-all-headings-and-inter-sans-serif-for-all-body-copy-via-google-fonts-apply-ultra-generous-spacing-section-padding-minimum-120px-vertical-a-clean-12-column-grid-subtle-architectural-background-texture-fine-diagonal-or-grid-line-pattern-in-near-black-at-low-opacity-and-thin-horizontal-gold-divider-lines-between-each-section-no-stock-photos-no-animations-beyond-subtle-fade-on-scroll-no-sliders-no-carousels-the-overall-impression-must-read-as-institutional-compliance-grade-and-conservative",
@@ -122,6 +122,14 @@
       "title": "The site must be fully responsive across mobile (320px+), tablet (768px+), and desktop (1280px+). All sections, the header/nav, footer, and legal pages must reflow gracefully. Touch targets must meet accessibility minimums. No horizontal scroll on any viewport.",
       "reqIds": [
         "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-generated-q-monogram-placeholder-in-the-site-header-with-the-uploaded-qh-monogram-logo-image-saved-as-frontend-public-assets-generated-qh-logo-png-display-it-as-the-left-aligned-logo-lockup-in-the-header-component-the-logo-must-be-sized-appropriately-for-the-fixed-header-height-40-48px-on-desktop-32px-on-mobile-and-must-render-on-the-dark-header-background-without-a-white-box-or-border-use-the-transparent-background-version-of-the-asset-alongside-the-monogram-retain-or-add-the-quindore-holdings-llc-wordmark-text-in-playfair-display-to-its-right",
+      "title": "Replace the current generated 'Q' monogram placeholder in the site header with the uploaded QH monogram logo image (saved as frontend/public/assets/generated/qh-logo.png). Display it as the left-aligned logo lockup in the Header component. The logo must be sized appropriately for the fixed header (height ~40–48px on desktop, ~32px on mobile), and must render on the dark header background without a white box or border — use the transparent-background version of the asset. Alongside the monogram, retain or add the 'Quindore Holdings LLC' wordmark text in Playfair Display to its right.",
+      "reqIds": [
+        "REQ-15"
       ],
       "version": 1
     }

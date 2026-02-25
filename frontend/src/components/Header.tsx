@@ -48,14 +48,16 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo lockup */}
-                    <Link to="/" className="flex items-center gap-3 flex-shrink-0" aria-label="Quindore Holdings LLC — Home">
+                    <Link
+                        to="/"
+                        className="flex items-center gap-3 flex-shrink-0"
+                        aria-label="Quindore Holdings LLC — Home"
+                    >
                         <img
-                            src="/assets/generated/quindore-monogram.dim_120x120.png"
-                            alt="Q monogram"
-                            className="h-8 w-8 object-contain"
-                            onError={(e) => {
-                                (e.target as HTMLImageElement).style.display = 'none';
-                            }}
+                            src="/assets/generated/qh-logo.dim_256x256.png"
+                            alt="QH monogram — Quindore Holdings"
+                            className="h-8 w-8 md:h-10 md:w-10 object-contain flex-shrink-0"
+                            style={{ mixBlendMode: 'normal' }}
                         />
                         <div className="flex flex-col leading-none">
                             <span
@@ -66,7 +68,12 @@ export default function Header() {
                             </span>
                             <span
                                 className="font-sans font-light"
-                                style={{ color: 'var(--color-text-muted)', fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+                                style={{
+                                    color: 'var(--color-text-muted)',
+                                    fontSize: '0.6rem',
+                                    letterSpacing: '0.2em',
+                                    textTransform: 'uppercase',
+                                }}
                             >
                                 Holdings LLC
                             </span>

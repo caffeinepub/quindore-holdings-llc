@@ -1,308 +1,36 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T22:52:09.176Z",
+  "generatedAt": "2026-02-25T23:00:47.386Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 14,
-    "implemented": 14,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Implement a global visual theme across all pages: background #0B0B0B, primary text #EDEDED, accent/gold #C6A85E. Load 'Playfair Display' (serif) for all headings and 'Inter' (sans-serif) for all body copy via Google Fonts. Apply ultra-generous spacing (section padding minimum 120px vertical), a clean 12-column grid, subtle architectural background texture (fine diagonal or grid line pattern in near-black at low opacity), and thin horizontal gold divider lines between each section. No stock photos, no animations beyond subtle fade-on-scroll, no sliders, no carousels. The overall impression must read as institutional, compliance-grade, and conservative.",
+        "id": "REQ-15",
+        "summary": "Replace the current generated 'Q' monogram placeholder in the site header with the uploaded QH monogram logo image (saved as frontend/public/assets/generated/qh-logo.png). Display it as the left-aligned logo lockup in the Header component. The logo must be sized appropriately for the fixed header (height ~40–48px on desktop, ~32px on mobile), and must render on the dark header background without a white box or border — use the transparent-background version of the asset. Alongside the monogram, retain or add the 'Quindore Holdings LLC' wordmark text in Playfair Display to its right.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js"
+          "frontend/src/components/Header.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js"
-        ]
-      },
-      {
-        "id": "REQ-10",
-        "summary": "Build the site footer containing: registered address '5830 E 2nd St, Ste 7000 #32674, Casper, WY 82609, United States', copyright line '© Quindore Holdings LLC. All rights reserved.', and footer navigation links to Privacy Policy (/privacy), Terms of Service (/terms), and Legal Disclaimer (/legal). Style in a dark sub-footer with muted gold link color and small Inter typography.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Footer.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Footer.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-11",
-        "summary": "Build a Privacy Policy page at route /privacy with formal institutional privacy policy content appropriate for a U.S. holding company website, covering: data collection practices (minimal — no e-commerce), use of cookies, third-party services, contact for privacy inquiries (info@quindore.com), and Wyoming governing law. Format as a long-form document page with serif heading, numbered sections, and a 'Last Updated' date.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/PrivacyPage.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/PrivacyPage.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Build a Terms of Service page at route /terms with formal terms appropriate for an informational holding company website (no e-commerce, no user accounts). Cover: purpose of the site (informational only), no warranties, limitation of liability, intellectual property, governing law (Wyoming), and contact for legal inquiries (info@quindore.com). Same document layout as the Privacy Policy page.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/TermsPage.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/TermsPage.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-13",
-        "summary": "Build a Legal Disclaimer page at route /legal with content clarifying: the website is for informational purposes only, Quindore Holdings LLC is not a licensed financial advisor or investment firm, no content constitutes financial or legal advice, subsidiaries operate independently under their own legal identities, and no consumer-facing transactions occur at this domain. Same document layout as Privacy Policy and Terms pages.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/LegalPage.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/LegalPage.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-14",
-        "summary": "The site must be fully responsive across mobile (320px+), tablet (768px+), and desktop (1280px+). All sections, the header/nav, footer, and legal pages must reflow gracefully. Touch targets must meet accessibility minimums. No horizontal scroll on any viewport.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Header.tsx",
-          "frontend/src/components/About.tsx",
-          "frontend/src/components/OperatingStructure.tsx",
-          "frontend/src/components/ComplianceGovernance.tsx",
-          "frontend/src/pages/GovernancePage.tsx",
-          "frontend/src/pages/StructurePage.tsx",
-          "frontend/src/index.css"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Header.tsx",
-          "frontend/src/components/About.tsx",
-          "frontend/src/components/OperatingStructure.tsx",
-          "frontend/src/components/ComplianceGovernance.tsx",
-          "frontend/src/pages/GovernancePage.tsx",
-          "frontend/src/pages/StructurePage.tsx",
-          "frontend/src/index.css"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Build the site header containing the Quindore Holdings LLC logo lockup (full wordmark + 'Q' monogram generated asset) left-aligned, and a minimal right-aligned navigation with links: About, Structure, Governance, Contact. The header must be sticky/fixed on scroll, with a semi-transparent dark background and a bottom gold accent line. Header must be fully responsive with a hamburger menu on mobile.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Header.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Header.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Build the Hero section with: headline 'Structured Ownership. Disciplined Governance. Long-Term Value.' in large Playfair Display, subtext 'Quindore Holdings LLC operates as a U.S.-registered parent entity overseeing independent digital operating subsidiaries under centralized strategic and financial oversight.' in Inter, and a single outlined CTA button labeled 'Contact' that anchors to the Contact section. The hero must occupy full viewport height, center-aligned content vertically, with the architectural background texture visible.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Hero.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Hero.tsx"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "Build the About section explaining: (1) Quindore Holdings LLC's role as a parent holding company, not an operating business; (2) centralized governance over subsidiaries; (3) long-term capital discipline and asset development focus; (4) the required disclaimer line 'This domain does not process consumer transactions directly.' The section must use a two-column layout on desktop (heading/summary left, detailed copy right) and a single column on mobile.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/About.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/About.tsx"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Build the Operating Structure section explaining the corporate hierarchy: (1) Quindore Holdings LLC as parent holding entity; (2) controlled subsidiaries operating under centralized oversight; (3) independent operating platforms within each subsidiary; (4) note that subsidiaries may transact under their own trade names. Present this as a clean structured text layout — no diagrams in this section; use a labeled grid or stacked card layout with gold accent borders.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/OperatingStructure.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/OperatingStructure.tsx"
-        ]
-      },
-      {
-        "id": "REQ-6",
-        "summary": "Build the Compliance & Governance section with formal prose covering: (1) operation under applicable U.S. federal and Wyoming state regulations; (2) internal compliance standards and policies; (3) financial reporting structure; (4) all payments processed exclusively through authorized third-party providers. Use a clean two-column or four-block grid layout with gold-accented category labels.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ComplianceGovernance.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ComplianceGovernance.tsx"
-        ]
-      },
-      {
-        "id": "REQ-7",
-        "summary": "Build a dedicated Corporate Structure page (route /structure) that renders a visual corporate hierarchy diagram showing: Quindore Holdings LLC at the top, with branches to labeled subsidiary placeholders, and further branches to operating platform placeholders. Use a CSS/SVG tree layout styled in the site's dark/gold theme. Include a brief executive summary paragraph above the diagram.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/StructurePage.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/StructurePage.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-8",
-        "summary": "Build a dedicated Executive Governance page (route /governance) that expands the governance content with formal sections covering: board-level oversight, internal audit and compliance function, risk management framework, and reporting obligations. Use an editorial two-column layout with section anchors and a right-side in-page navigation menu.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/GovernancePage.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/GovernancePage.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-9",
-        "summary": "Build the Contact section displaying the email address info@quindore.com as a styled, clickable mailto link. No contact form. Include a brief formal line such as 'For institutional inquiries, please direct correspondence to the address below.' Section must be minimal and uncluttered.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Contact.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Contact.tsx"
+          "frontend/src/components/Header.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
-    "backend/main.mo",
     "build-request.json",
-    "build-template/Dockerfile",
-    "build-template/LICENSE",
     "build-template/README.md",
-    "build-template/deploy.sh",
-    "build-template/icp.yaml",
-    "build-template/package.json",
-    "build-template/pnpm-lock.yaml",
-    "build-template/pnpm-workspace.yaml",
-    "build-template/scripts/prune-unused-images.js",
-    "build-template/scripts/resize-images.js",
-    "build-template/src/backend/canister.yaml",
-    "build-template/src/backend/system-idl/aaaaa-aa.did",
-    "build-template/src/frontend/canister.yaml",
-    "build-template/src/frontend/components.json",
-    "build-template/src/frontend/env.json",
-    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
-    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
-    "build-template/src/frontend/eslint.config.js",
-    "build-template/src/frontend/package.json",
-    "build-template/src/frontend/postcss.config.js",
-    "build-template/src/frontend/src/components/ui/accordion.tsx",
-    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
-    "build-template/src/frontend/src/components/ui/alert.tsx",
-    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
-    "build-template/src/frontend/src/components/ui/avatar.tsx",
-    "build-template/src/frontend/src/components/ui/badge.tsx",
-    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
-    "build-template/src/frontend/src/components/ui/button.tsx",
-    "build-template/src/frontend/src/components/ui/calendar.tsx",
-    "build-template/src/frontend/src/components/ui/card.tsx",
-    "build-template/src/frontend/src/components/ui/carousel.tsx",
-    "build-template/src/frontend/src/components/ui/chart.tsx",
-    "build-template/src/frontend/src/components/ui/checkbox.tsx",
-    "build-template/src/frontend/src/components/ui/collapsible.tsx",
-    "build-template/src/frontend/src/components/ui/command.tsx",
-    "build-template/src/frontend/src/components/ui/context-menu.tsx",
-    "build-template/src/frontend/src/components/ui/dialog.tsx",
-    "build-template/src/frontend/src/components/ui/drawer.tsx",
-    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
-    "build-template/src/frontend/src/components/ui/form.tsx",
-    "build-template/src/frontend/src/components/ui/hover-card.tsx",
-    "build-template/src/frontend/src/components/ui/input-otp.tsx",
-    "build-template/src/frontend/src/components/ui/input.tsx",
-    "build-template/src/frontend/src/components/ui/label.tsx",
-    "build-template/src/frontend/src/components/ui/menubar.tsx",
-    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
-    "build-template/src/frontend/src/components/ui/pagination.tsx",
-    "build-template/src/frontend/src/components/ui/popover.tsx",
-    "build-template/src/frontend/src/components/ui/progress.tsx",
-    "build-template/src/frontend/src/components/ui/radio-group.tsx",
-    "build-template/src/frontend/src/components/ui/resizable.tsx",
-    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
-    "build-template/src/frontend/src/components/ui/select.tsx",
-    "build-template/src/frontend/src/components/ui/separator.tsx",
-    "build-template/src/frontend/src/components/ui/sheet.tsx",
-    "build-template/src/frontend/src/components/ui/sidebar.tsx",
-    "build-template/src/frontend/src/components/ui/skeleton.tsx",
-    "build-template/src/frontend/src/components/ui/slider.tsx",
-    "build-template/src/frontend/src/components/ui/sonner.tsx",
-    "build-template/src/frontend/src/components/ui/switch.tsx",
-    "build-template/src/frontend/src/components/ui/table.tsx",
-    "build-template/src/frontend/src/components/ui/tabs.tsx",
-    "build-template/src/frontend/src/components/ui/textarea.tsx",
-    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
-    "build-template/src/frontend/src/components/ui/toggle.tsx",
-    "build-template/src/frontend/src/components/ui/tooltip.tsx",
-    "build-template/src/frontend/src/hooks/use-mobile.tsx",
-    "build-template/src/frontend/src/lib/utils.ts",
-    "build-template/src/frontend/tsconfig.json",
-    "build-template/src/frontend/vite.config.js",
-    "build-template/tsconfig.json",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.css",
-    "frontend/index.html",
-    "frontend/public/assets/generated/bg-texture.dim_800x800.png",
-    "frontend/public/assets/generated/quindore-logo-lockup.dim_480x80.png",
-    "frontend/public/assets/generated/quindore-monogram.dim_120x120.png",
-    "frontend/src/App.tsx",
-    "frontend/src/backend.d.ts",
-    "frontend/src/backend.ts",
-    "frontend/src/components/About.tsx",
-    "frontend/src/components/ComplianceGovernance.tsx",
-    "frontend/src/components/Contact.tsx",
-    "frontend/src/components/Footer.tsx",
+    "frontend/public/assets/generated/qh-logo.dim_256x256.png",
     "frontend/src/components/Header.tsx",
-    "frontend/src/components/Hero.tsx",
-    "frontend/src/components/OperatingStructure.tsx",
-    "frontend/src/config.ts",
-    "frontend/src/declarations/backend.did.d.ts",
-    "frontend/src/declarations/backend.did.js",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/hooks/useQueries.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/src/pages/GovernancePage.tsx",
-    "frontend/src/pages/LegalPage.tsx",
-    "frontend/src/pages/PrivacyPage.tsx",
-    "frontend/src/pages/StructurePage.tsx",
-    "frontend/src/pages/TermsPage.tsx",
-    "frontend/src/ui-summary.json",
-    "frontend/src/utils/StorageClient.ts",
-    "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
