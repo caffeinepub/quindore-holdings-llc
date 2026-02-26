@@ -22,9 +22,10 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-4">
                             <img
-                                src="/assets/generated/quindore-monogram.dim_120x120.png"
-                                alt="Q monogram"
-                                className="h-6 w-6 object-contain"
+                                src="/assets/generated/qh-logo.dim_200x200.png"
+                                alt="QH monogram — Quindore"
+                                className="h-8 w-8 object-contain"
+                                style={{ background: 'transparent' }}
                                 onError={(e) => {
                                     (e.target as HTMLImageElement).style.display = 'none';
                                 }}

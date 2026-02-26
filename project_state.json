@@ -1,197 +1,23 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Premium institutional-grade corporate website for Quindore Holdings LLC — a Wyoming-registered private holding company. Dark (#0B0B0B) background, off-white (#EDEDED) text, muted gold (#C6A85E) accents. Elegant serif (Playfair Display) headings and Inter body. Production-ready HTML/CSS with external stylesheet, no frameworks, no inline styles. Designed for financial institution review (Stripe, banks, payment processors).",
-  "architectural_notes": [
-    "Production-ready HTML + external CSS only — no frameworks, no inline styles, no unnecessary JavaScript",
-    "Color palette: background #0B0B0B, typography #EDEDED, accent gold #C6A85E",
-    "Typography: Playfair Display (headings), Inter (body); strong hierarchy, generous spacing",
-    "Fully responsive, fast-loading; no animations, sliders, carousels, or marketing gimmicks",
-    "Institutional aesthetic targeting financial institution review (Stripe, U.S. banks, payment processors)"
-  ],
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Remove the white background and output a transparent PNG of the gold QH monogram lettermark on a transparent background (IMG_20260226_034111-1.png > qh-logo.dim_256x256.png)",
+  "imageRequirements": "## Edit Images\n- Remove the solid black background, keeping only the gold QH monogram on a transparent background (ChatGPT Imbage Feb 26, 2026, 01_13_07 PM.png > qh-logo.dim_200x200.png)",
   "existing_features": [
     {
-      "id": "feature-implement-a-global-visual-theme-across-all-pages-background-0b0b0b-primary-text-ededed-accent-gold-c6a85e-load-playfair-display-serif-for-all-headings-and-inter-sans-serif-for-all-body-copy-via-google-fonts-apply-ultra-generous-spacing-section-padding-minimum-120px-vertical-a-clean-12-column-grid-subtle-architectural-background-texture-fine-diagonal-or-grid-line-pattern-in-near-black-at-low-opacity-and-thin-horizontal-gold-divider-lines-between-each-section-no-stock-photos-no-animations-beyond-subtle-fade-on-scroll-no-sliders-no-carousels-the-overall-impression-must-read-as-institutional-compliance-grade-and-conservative",
-      "title": "Implement a global visual theme across all pages: background #0B0B0B, primary text #EDEDED, accent/gold #C6A85E. Load 'Playfair Display' (serif) for all headings and 'Inter' (sans-serif) for all body copy via Google Fonts. Apply ultra-generous spacing (section padding minimum 120px vertical), a clean 12-column grid, subtle architectural background texture (fine diagonal or grid line pattern in near-black at low opacity), and thin horizontal gold divider lines between each section. No stock photos, no animations beyond subtle fade-on-scroll, no sliders, no carousels. The overall impression must read as institutional, compliance-grade, and conservative.",
+      "id": "feature-use-the-uploaded-qh-monogram-image-as-the-site-logo-asset-remove-the-black-background-so-only-the-gold-qh-monogram-is-visible-transparent-background-and-save-it-as-the-primary-logo-file-at-frontend-public-assets-generated-qh-logo-png",
+      "title": "Use the uploaded QH monogram image as the site logo asset. Remove the black background so only the gold QH monogram is visible (transparent background), and save it as the primary logo file at frontend/public/assets/generated/qh-logo.png.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-build-the-site-header-containing-the-quindore-holdings-llc-logo-lockup-full-wordmark-q-monogram-generated-asset-left-aligned-and-a-minimal-right-aligned-navigation-with-links-about-structure-governance-contact-the-header-must-be-sticky-fixed-on-scroll-with-a-semi-transparent-dark-background-and-a-bottom-gold-accent-line-header-must-be-fully-responsive-with-a-hamburger-menu-on-mobile",
-      "title": "Build the site header containing the Quindore Holdings LLC logo lockup (full wordmark + 'Q' monogram generated asset) left-aligned, and a minimal right-aligned navigation with links: About, Structure, Governance, Contact. The header must be sticky/fixed on scroll, with a semi-transparent dark background and a bottom gold accent line. Header must be fully responsive with a hamburger menu on mobile.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-the-hero-section-with-headline-structured-ownership-disciplined-governance-long-term-value-in-large-playfair-display-subtext-quindore-holdings-llc-operates-as-a-u-s-registered-parent-entity-overseeing-independent-digital-operating-subsidiaries-under-centralized-strategic-and-financial-oversight-in-inter-and-a-single-outlined-cta-button-labeled-contact-that-anchors-to-the-contact-section-the-hero-must-occupy-full-viewport-height-center-aligned-content-vertically-with-the-architectural-background-texture-visible",
-      "title": "Build the Hero section with: headline 'Structured Ownership. Disciplined Governance. Long-Term Value.' in large Playfair Display, subtext 'Quindore Holdings LLC operates as a U.S.-registered parent entity overseeing independent digital operating subsidiaries under centralized strategic and financial oversight.' in Inter, and a single outlined CTA button labeled 'Contact' that anchors to the Contact section. The hero must occupy full viewport height, center-aligned content vertically, with the architectural background texture visible.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-the-about-section-explaining-1-quindore-holdings-llc-s-role-as-a-parent-holding-company-not-an-operating-business-2-centralized-governance-over-subsidiaries-3-long-term-capital-discipline-and-asset-development-focus-4-the-required-disclaimer-line-this-domain-does-not-process-consumer-transactions-directly-the-section-must-use-a-two-column-layout-on-desktop-heading-summary-left-detailed-copy-right-and-a-single-column-on-mobile",
-      "title": "Build the About section explaining: (1) Quindore Holdings LLC's role as a parent holding company, not an operating business; (2) centralized governance over subsidiaries; (3) long-term capital discipline and asset development focus; (4) the required disclaimer line 'This domain does not process consumer transactions directly.' The section must use a two-column layout on desktop (heading/summary left, detailed copy right) and a single column on mobile.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-the-operating-structure-section-explaining-the-corporate-hierarchy-1-quindore-holdings-llc-as-parent-holding-entity-2-controlled-subsidiaries-operating-under-centralized-oversight-3-independent-operating-platforms-within-each-subsidiary-4-note-that-subsidiaries-may-transact-under-their-own-trade-names-present-this-as-a-clean-structured-text-layout-no-diagrams-in-this-section-use-a-labeled-grid-or-stacked-card-layout-with-gold-accent-borders",
-      "title": "Build the Operating Structure section explaining the corporate hierarchy: (1) Quindore Holdings LLC as parent holding entity; (2) controlled subsidiaries operating under centralized oversight; (3) independent operating platforms within each subsidiary; (4) note that subsidiaries may transact under their own trade names. Present this as a clean structured text layout — no diagrams in this section; use a labeled grid or stacked card layout with gold accent borders.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-the-compliance-governance-section-with-formal-prose-covering-1-operation-under-applicable-u-s-federal-and-wyoming-state-regulations-2-internal-compliance-standards-and-policies-3-financial-reporting-structure-4-all-payments-processed-exclusively-through-authorized-third-party-providers-use-a-clean-two-column-or-four-block-grid-layout-with-gold-accented-category-labels",
-      "title": "Build the Compliance & Governance section with formal prose covering: (1) operation under applicable U.S. federal and Wyoming state regulations; (2) internal compliance standards and policies; (3) financial reporting structure; (4) all payments processed exclusively through authorized third-party providers. Use a clean two-column or four-block grid layout with gold-accented category labels.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-a-dedicated-corporate-structure-page-route-structure-that-renders-a-visual-corporate-hierarchy-diagram-showing-quindore-holdings-llc-at-the-top-with-branches-to-labeled-subsidiary-placeholders-and-further-branches-to-operating-platform-placeholders-use-a-css-svg-tree-layout-styled-in-the-site-s-dark-gold-theme-include-a-brief-executive-summary-paragraph-above-the-diagram",
-      "title": "Build a dedicated Corporate Structure page (route /structure) that renders a visual corporate hierarchy diagram showing: Quindore Holdings LLC at the top, with branches to labeled subsidiary placeholders, and further branches to operating platform placeholders. Use a CSS/SVG tree layout styled in the site's dark/gold theme. Include a brief executive summary paragraph above the diagram.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-a-dedicated-executive-governance-page-route-governance-that-expands-the-governance-content-with-formal-sections-covering-board-level-oversight-internal-audit-and-compliance-function-risk-management-framework-and-reporting-obligations-use-an-editorial-two-column-layout-with-section-anchors-and-a-right-side-in-page-navigation-menu",
-      "title": "Build a dedicated Executive Governance page (route /governance) that expands the governance content with formal sections covering: board-level oversight, internal audit and compliance function, risk management framework, and reporting obligations. Use an editorial two-column layout with section anchors and a right-side in-page navigation menu.",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-the-contact-section-displaying-the-email-address-info-quindore-com-as-a-styled-clickable-mailto-link-no-contact-form-include-a-brief-formal-line-such-as-for-institutional-inquiries-please-direct-correspondence-to-the-address-below-section-must-be-minimal-and-uncluttered",
-      "title": "Build the Contact section displaying the email address info@quindore.com as a styled, clickable mailto link. No contact form. Include a brief formal line such as 'For institutional inquiries, please direct correspondence to the address below.' Section must be minimal and uncluttered.",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-the-site-footer-containing-registered-address-5830-e-2nd-st-ste-7000-32674-casper-wy-82609-united-states-copyright-line-quindore-holdings-llc-all-rights-reserved-and-footer-navigation-links-to-privacy-policy-privacy-terms-of-service-terms-and-legal-disclaimer-legal-style-in-a-dark-sub-footer-with-muted-gold-link-color-and-small-inter-typography",
-      "title": "Build the site footer containing: registered address '5830 E 2nd St, Ste 7000 #32674, Casper, WY 82609, United States', copyright line '© Quindore Holdings LLC. All rights reserved.', and footer navigation links to Privacy Policy (/privacy), Terms of Service (/terms), and Legal Disclaimer (/legal). Style in a dark sub-footer with muted gold link color and small Inter typography.",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-a-privacy-policy-page-at-route-privacy-with-formal-institutional-privacy-policy-content-appropriate-for-a-u-s-holding-company-website-covering-data-collection-practices-minimal-no-e-commerce-use-of-cookies-third-party-services-contact-for-privacy-inquiries-info-quindore-com-and-wyoming-governing-law-format-as-a-long-form-document-page-with-serif-heading-numbered-sections-and-a-last-updated-date",
-      "title": "Build a Privacy Policy page at route /privacy with formal institutional privacy policy content appropriate for a U.S. holding company website, covering: data collection practices (minimal — no e-commerce), use of cookies, third-party services, contact for privacy inquiries (info@quindore.com), and Wyoming governing law. Format as a long-form document page with serif heading, numbered sections, and a 'Last Updated' date.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-a-terms-of-service-page-at-route-terms-with-formal-terms-appropriate-for-an-informational-holding-company-website-no-e-commerce-no-user-accounts-cover-purpose-of-the-site-informational-only-no-warranties-limitation-of-liability-intellectual-property-governing-law-wyoming-and-contact-for-legal-inquiries-info-quindore-com-same-document-layout-as-the-privacy-policy-page",
-      "title": "Build a Terms of Service page at route /terms with formal terms appropriate for an informational holding company website (no e-commerce, no user accounts). Cover: purpose of the site (informational only), no warranties, limitation of liability, intellectual property, governing law (Wyoming), and contact for legal inquiries (info@quindore.com). Same document layout as the Privacy Policy page.",
-      "reqIds": [
-        "REQ-12"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-a-legal-disclaimer-page-at-route-legal-with-content-clarifying-the-website-is-for-informational-purposes-only-quindore-holdings-llc-is-not-a-licensed-financial-advisor-or-investment-firm-no-content-constitutes-financial-or-legal-advice-subsidiaries-operate-independently-under-their-own-legal-identities-and-no-consumer-facing-transactions-occur-at-this-domain-same-document-layout-as-privacy-policy-and-terms-pages",
-      "title": "Build a Legal Disclaimer page at route /legal with content clarifying: the website is for informational purposes only, Quindore Holdings LLC is not a licensed financial advisor or investment firm, no content constitutes financial or legal advice, subsidiaries operate independently under their own legal identities, and no consumer-facing transactions occur at this domain. Same document layout as Privacy Policy and Terms pages.",
-      "reqIds": [
-        "REQ-13"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-the-site-must-be-fully-responsive-across-mobile-320px-tablet-768px-and-desktop-1280px-all-sections-the-header-nav-footer-and-legal-pages-must-reflow-gracefully-touch-targets-must-meet-accessibility-minimums-no-horizontal-scroll-on-any-viewport",
-      "title": "The site must be fully responsive across mobile (320px+), tablet (768px+), and desktop (1280px+). All sections, the header/nav, footer, and legal pages must reflow gracefully. Touch targets must meet accessibility minimums. No horizontal scroll on any viewport.",
-      "reqIds": [
-        "REQ-14"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-replace-the-current-generated-q-monogram-placeholder-in-the-site-header-with-the-uploaded-qh-monogram-logo-image-saved-as-frontend-public-assets-generated-qh-logo-png-display-it-as-the-left-aligned-logo-lockup-in-the-header-component-the-logo-must-be-sized-appropriately-for-the-fixed-header-height-40-48px-on-desktop-32px-on-mobile-and-must-render-on-the-dark-header-background-without-a-white-box-or-border-use-the-transparent-background-version-of-the-asset-alongside-the-monogram-retain-or-add-the-quindore-holdings-llc-wordmark-text-in-playfair-display-to-its-right",
-      "title": "Replace the current generated 'Q' monogram placeholder in the site header with the uploaded QH monogram logo image (saved as frontend/public/assets/generated/qh-logo.png). Display it as the left-aligned logo lockup in the Header component. The logo must be sized appropriately for the fixed header (height ~40–48px on desktop, ~32px on mobile), and must render on the dark header background without a white box or border — use the transparent-background version of the asset. Alongside the monogram, retain or add the 'Quindore Holdings LLC' wordmark text in Playfair Display to its right.",
-      "reqIds": [
-        "REQ-15"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Hero section with headline 'Structured Ownership. Disciplined Governance. Long-Term Value.' and Contact CTA",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "About section explaining parent holding company role, centralized governance, long-term capital discipline, asset development focus, and 'no direct consumer transactions' disclaimer",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Operating Structure section covering parent entity, controlled subsidiaries, independent platforms, and subsidiary trade names",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "Compliance & Governance section covering U.S./Wyoming regulations, internal standards, financial reporting, and third-party payment processors",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Contact section (info@quindore.com) and footer with registered Wyoming address and Privacy/Terms/Legal links",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Full Privacy Policy, Terms of Service, and Legal Disclaimer pages",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-7",
-      "summary": "Gold logo + monogram combination lockup integrated in header; subtle architectural background texture and gold divider lines between sections",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-8",
-      "summary": "Executive-level governance expansion page and dedicated Corporate Structure diagram page",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-9",
-      "summary": "DNS + Cloudflare deployment checklist and Stripe review heuristics optimization",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "gameProjectType": "none",
-  "projectName": "Quindore Holdings LLC",
+  "new_feature_requests": [],
+  "projectName": "Quindore",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

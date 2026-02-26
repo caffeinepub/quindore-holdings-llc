@@ -51,33 +51,27 @@ export default function Header() {
                     <Link
                         to="/"
                         className="flex items-center gap-3 flex-shrink-0"
-                        aria-label="Quindore Holdings LLC — Home"
+                        aria-label="Quindore — Home"
                     >
                         <img
-                            src="/assets/generated/qh-logo.dim_256x256.png"
-                            alt="QH monogram — Quindore Holdings"
-                            className="h-8 w-8 md:h-10 md:w-10 object-contain flex-shrink-0"
-                            style={{ mixBlendMode: 'normal' }}
+                            src="/assets/generated/qh-logo.dim_200x200.png"
+                            alt="QH monogram — Quindore"
+                            className="h-10 w-10 md:h-12 md:w-12 object-contain flex-shrink-0"
+                            style={{
+                                background: 'transparent',
+                                mixBlendMode: 'normal',
+                            }}
                         />
-                        <div className="flex flex-col leading-none">
-                            <span
-                                className="font-serif font-medium tracking-wide"
-                                style={{ color: 'var(--color-text)', fontSize: '1rem', letterSpacing: '0.04em' }}
-                            >
-                                QUINDORE
-                            </span>
-                            <span
-                                className="font-sans font-light"
-                                style={{
-                                    color: 'var(--color-text-muted)',
-                                    fontSize: '0.6rem',
-                                    letterSpacing: '0.2em',
-                                    textTransform: 'uppercase',
-                                }}
-                            >
-                                Holdings LLC
-                            </span>
-                        </div>
+                        <span
+                            className="font-serif font-medium tracking-wide"
+                            style={{
+                                color: 'var(--color-text)',
+                                fontSize: '1.0625rem',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            QUINDORE
+                        </span>
                     </Link>
 
                     {/* Desktop navigation */}

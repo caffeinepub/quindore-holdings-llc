@@ -1,23 +1,33 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Integrate uploaded QH monogram logo into site header and hero",
+  "title": "Replace logo with uploaded QH monogram company logo",
   "requirements": [
     {
-      "id": "REQ-15",
-      "summary": "Replace the current generated 'Q' monogram placeholder in the site header with the uploaded QH monogram logo image (qh-logo.png). Display it as the left-aligned logo lockup with the 'Quindore Holdings LLC' wordmark text in Playfair Display. The logo must be sized appropriately for the fixed header (height ~40–48px on desktop, ~32px on mobile) and must render on the dark header background without a white box or border using the transparent-background version of the asset.",
+      "id": "REQ-1",
+      "summary": "Replace site logo with the uploaded QH monogram, removing the black background to show only the gold monogram on a transparent background",
       "acceptanceCriteria": [
-        "The QH gold monogram logo image is displayed in the Header, left-aligned, at correct proportions",
-        "The logo background is transparent — no white box visible against the dark header",
-        "On mobile the logo scales down gracefully without cropping",
-        "The 'Quindore Holdings LLC' wordmark text appears beside the monogram in Playfair Display",
-        "The logo links to the home page (/)"
+        "The QH monogram logo is saved at frontend/public/assets/generated/qh-logo.png with a transparent background.",
+        "The black background from the original upload is removed — only the gold monogram renders.",
+        "The Header component renders the new qh-logo.png in place of any previously generated or placeholder logo.",
+        "The logo displays correctly on the dark site background without a visible bounding box or background fill.",
+        "The Footer also uses the new qh-logo.png wherever a logo mark appears."
       ],
       "file_operations": [
         {
+          "path": "frontend/public/assets/generated/qh-logo.dim_200x200.png",
+          "operation": "create",
+          "description": "Save the processed QH monogram logo with transparent background, removing the black background from the uploaded ChatGPT Imbage Feb 26, 2026, 01_13_07 PM.png. The final asset shows only the gold QH monogram with no background fill."
+        },
+        {
           "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Replace the current placeholder logo in the Header component with the uploaded QH monogram logo image located at frontend/public/assets/generated/qh-logo.dim_256x256.png. Update the logo lockup to display the transparent PNG monogram at the appropriate size (h-10 md:h-12 for ~40–48px on desktop, h-8 for ~32px on mobile) alongside the 'Quindore Holdings LLC' wordmark text in Playfair Display. Ensure the logo is wrapped in a Link component that navigates to the home page (/). Verify that the transparent background renders correctly on the dark header without a white box."
+          "description": "Update the logo image reference to use frontend/public/assets/generated/qh-logo.dim_200x200.png instead of any existing logo asset. Ensure the image renders with appropriate dimensions and alt text for the Quindore Holdings brand."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update any logo image references in the Footer to use frontend/public/assets/generated/qh-logo.dim_200x200.png, ensuring consistent branding across the header and footer."
         }
       ]
     }

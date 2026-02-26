@@ -1,13 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the generated placeholder monogram in the site header with the uploaded QH gold monogram logo image, displayed with a transparent background alongside the "Quindore Holdings LLC" wordmark.
+**Goal:** Replace the existing site logo with the uploaded QH monogram, removing its black background so only the gold monogram appears on a transparent background.
 
 **Planned changes:**
-- Edit the uploaded QH monogram image to remove its white background, producing a transparent PNG saved as `frontend/public/assets/generated/qh-logo.png`
-- Update the Header component to display the transparent QH monogram logo image (height ~40–48px desktop, ~32px mobile), left-aligned
-- Retain the "Quindore Holdings LLC" wordmark text in Playfair Display to the right of the monogram
-- Ensure the logo links to the home page (/)
-- Preserve all existing header navigation links and responsive hamburger menu behavior
+- Remove the black background from the uploaded QH monogram image, keeping only the gold QH monogram with a transparent background, and save it as `frontend/public/assets/generated/qh-logo.png`
+- Update the Header component to use the new `qh-logo.png` instead of any previously generated or placeholder logo
+- Update the Footer to use the new `qh-logo.png` wherever a logo mark appears
 
-**User-visible outcome:** The site header shows the real gold QH monogram logo with no white box, rendering cleanly against the dark header background, with the "Quindore Holdings LLC" wordmark beside it.
+**User-visible outcome:** The site header and footer display the gold QH monogram logo against the dark site background with no visible black bounding box or background fill.

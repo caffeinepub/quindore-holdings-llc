@@ -2,9 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-current-generated-q-monogram-placeholder-in-the-site-header-with-the-uploaded-qh-monogram-logo-image-saved-as-frontend-public-assets-generated-qh-logo-png-display-it-as-the-left-aligned-logo-lockup-in-the-header-component-the-logo-must-be-sized-appropriately-for-the-fixed-header-height-40-48px-on-desktop-32px-on-mobile-and-must-render-on-the-dark-header-background-without-a-white-box-or-border-use-the-transparent-background-version-of-the-asset-alongside-the-monogram-retain-or-add-the-quindore-holdings-llc-wordmark-text-in-playfair-display-to-its-right",
-      "featureTitle": "Replace the current generated 'Q' monogram placeholder in the site header with the uploaded QH monogram logo image (saved as frontend/public/assets/generated/qh-logo.png). Display it as the left-aligned logo lockup in the Header component. The logo must be sized appropriately for the fixed header (height ~40–48px on desktop, ~32px on mobile), and must render on the dark header background without a white box or border — use the transparent-background version of the asset. Alongside the monogram, retain or add the 'Quindore Holdings LLC' wordmark text in Playfair Display to its right.",
+      "featureId": "feature-use-the-uploaded-qh-monogram-image-as-the-site-logo-asset-remove-the-black-background-so-only-the-gold-qh-monogram-is-visible-transparent-background-and-save-it-as-the-primary-logo-file-at-frontend-public-assets-generated-qh-logo-png",
+      "featureTitle": "Use the uploaded QH monogram image as the site logo asset. Remove the black background so only the gold QH monogram is visible (transparent background), and save it as the primary logo file at frontend/public/assets/generated/qh-logo.png.",
       "files": [
+        "frontend/src/components/Footer.tsx",
         "frontend/src/components/Header.tsx"
       ],
       "components": [
@@ -15,7 +16,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-15"
+        "REQ-1"
       ],
       "confidence": "high"
     }

@@ -1,30 +1,39 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T23:00:47.382Z",
-  "summary": "The diff shows Header.tsx was updated to use the QH monogram logo image. Most REQ-15 acceptance criteria are met, but there are some notable deviations worth flagging.",
+  "generatedAt": "2026-02-26T07:46:53.033Z",
+  "summary": "The diff modifies Header.tsx and Footer.tsx to reference a logo file, but uses the wrong filename 'qh-logo.dim_200x200.png' instead of the required 'qh-logo.png'. Additionally, there is no evidence that the actual logo image file was added at frontend/public/assets/generated/qh-logo.png with a transparent background.",
   "missing_requirements": [
     {
-      "id": "REQ-15",
-      "requirement": "Logo image saved as frontend/public/assets/generated/qh-logo.png and referenced accordingly",
-      "reason": "The build request specifies the asset should be saved as 'frontend/public/assets/generated/qh-logo.png', but the diff shows Header.tsx references '/assets/generated/qh-logo.dim_256x256.png' instead. No new asset file is listed as added in the diff.",
+      "id": "REQ-1",
+      "requirement": "Save the QH monogram logo as the primary logo file at frontend/public/assets/generated/qh-logo.png with a transparent background (black background removed).",
+      "reason": "No image file was added to frontend/public/assets/generated/. The diff shows zero added files, so the actual PNG asset at the required path does not exist.",
+      "evidence": [
+        "frontend/public/assets/generated/qh-logo.png"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "The Header component renders the new qh-logo.png (not qh-logo.dim_200x200.png).",
+      "reason": "Header.tsx references '/assets/generated/qh-logo.dim_200x200.png' instead of the required '/assets/generated/qh-logo.png'.",
       "evidence": [
         "frontend/src/components/Header.tsx"
       ]
     },
     {
-      "id": "REQ-15",
-      "requirement": "The 'Quindore Holdings LLC' wordmark text appears beside the monogram in Playfair Display",
-      "reason": "The wordmark is split into 'QUINDORE' using font-serif (Playfair Display) and 'Holdings LLC' using font-sans (Inter). The requirement specifies the full wordmark in Playfair Display, but 'Holdings LLC' is rendered in Inter, not Playfair Display.",
+      "id": "REQ-1",
+      "requirement": "The Footer component renders the new qh-logo.png (not qh-logo.dim_200x200.png).",
+      "reason": "Footer.tsx references '/assets/generated/qh-logo.dim_200x200.png' instead of the required '/assets/generated/qh-logo.png'.",
       "evidence": [
-        "frontend/src/components/Header.tsx"
+        "frontend/src/components/Footer.tsx"
       ]
     }
   ],
   "hallucinated_features": [],
-  "confidence": 0.8,
+  "confidence": 0.92,
   "changed_files": [
     "frontend-file-summaries.txt",
+    "frontend/src/components/Footer.tsx",
     "frontend/src/components/Header.tsx",
     "project_state.json"
   ]
